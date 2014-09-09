@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+ <!--
+ "YouTube Demo-2
+ Developed by : Alin
+ ... just for my practice
+ Date : 9/9/2014
+ Used : Bootstrap 3.2.0, HTML5, CSS3, jQuery 
+ 
+ Responsive for : Desktop, Tab, Mobile and another devices. 
+ -->
+ 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon-vfldLzJxy.ico" type="image/x-icon">
+    <title>YouTube : Demo v.2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- My style sheet -->
+    <link href="css/style.css" rel="stylesheet"></link>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  
+  <body>
+   
+   
+    <!-- header part -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- header container -->
+        <div class="container-fluid">
+            <div class="row">
+               <!-- Mobile Menu -->
+                <button id="btn_toggle" type="button" class="navbar-toggle" data-toggle="modal" data-target="#mobile_menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <!-- /Mobile Menu -->
+               
+                <!-- logo -->
+                <div class="col-md-4 col-sm-4 col-xs-12" id="header_logo">
+                    <a href="#"><img class = "brand" src="images/YouTube-logo-full_color.png"/></a>
+                </div>
+                
+                <!-- search box -->
+                <div class="col-md-4 col-sm-4 col-xs-10" id="search_box">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+                
+                <!-- buttons -->
+                <div class="col-md-4 col-sm-4 hidden-xs" id="button_holder">
+                    <button id="btn_upload" type="button" class="btn btn-default btn-sm">
+                            Upload
+                        </button>
+
+                        <button id="btn_signin" type="button" class="btn btn-primary btn-sm">
+                            Sign in
+                        </button>
+                </div>
+            </div>
+        </div> <!-- /header container -->
+    </div>
+    <!-- /header part -->
+    
+    
+    
+    <!-- body part -->
+    <div class="container-fluid" id="body_container">
+           
+           <!-- sidebar -->
+           <div class="row">
+               <div class="col-md-3 col-sm-3 hidden-xs" id="sidebar_container" role="navigation">
+                   <div class="container-fluid" id="sidebar">
+                       
+                       <!-- sidebar inner -->
+                       <div class="panel panel-default" id="sidebar_panel">
+                            <div class="panel-heading">
+                                  <div class="container-fluid" id="panel-title">   
+                                        <a id="wtw" href="#" class="list-group-item no-border">
+                                            <span class="glyphicon glyphicon-home"></span> &nbsp; What to Watch
+                                        </a>
+                                   </div>
+</div>
+                            <div class="panel-body">
+                                <div id="panelbody-title">BEST OF YOUTUBE</div>
+                                <div id="sidebarlist">
+                                    <a href="#" class="list-group-item no-border"><span class="glyphicon glyphicon-star"></span> &nbsp; Popular on YouTube</a>
+                                    <a href="#" class="list-group-item no-border"><span class="glyphicon glyphicon-headphones"></span>  &nbsp; Music</a>
+                                    <a href="#" class="list-group-item no-border"><span class="glyphicon glyphicon-stats"></span>&nbsp;
+         Sports</a>
+                                    <a href="#" class="list-group-item no-border"><span class="glyphicon glyphicon-tower"></span>&nbsp;
+         Gaming</a>
+                                </div>
+                                    <a href="#" class="list-group-item no-side-border"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp; Browse channels</a>
+                                <a href="#" class="list-group-item no-side-border" data-toggle="modal" data-target="#about"><span class="glyphicon glyphicon-info-sign"></span> &nbsp; About</a>
+               <!-- /Mobile Menu --></a>
+                            </div>
+                            <div class="container-fluid align-left" id="leftsidebar-last">
+                                    Sign in now to see your channels and recommendations!
+                                    
+                                    <div class="container-fluid align-center padding-top-extra">
+                                        <button class="btn btn-primary sm-round btn-sm" id="sign-in"> <!-- something round --> 
+                                            Sign in
+                                        </button>
+                                    </div>
+                                    
+                                    <hr>
+
+                        </div>
+                        </div>
+                       <!-- /sidebar inner -->
+                       
+                   </div>
+               </div> <!-- /sidebar -->
+               
+               <!-- content part-->
+               <div class="col-md-9 col-sm-9 col-xs-12" id="content_container">
+                <!-- content Inner body -->
+                   
+                   <!-- lead content -->
+                   <div class="container-fluid hidden-xs" id="content_inner">
+                       <div class="row-fluid">
+                           <div class="col-md-6 col-sm-6 col-xs-12" id="content_lead_left">
+                              
+                              <!-- lead content left -->
+                               <div class="container-fluid">
+                                   <div class="row show-grid" id="video_holder">
+                                       <a href="https://www.youtube.com/watch?v=hRgojLT6uWc">
+                                            <img width="100%" class="media-object" src="images/mqdefault_lead_left.jpg" alt="...">
+                                        </a>
+                                   </div>
+                                   <!-- lead content description -->
+                                   <div class="row">
+                                       <a class="a-text" href="https://www.youtube.com/watch?v=hRgojLT6uWc">Teri Kasam (Unplugged) Falak Shabir - Official Music Video...</a> <br><small class="small-desc">by <a href="https://www.youtube.com/channel/UCzL6rJhkoXkIt0fCv9T9_uA">Pop Chartbusters</a></small>
+                                   </div> <!-- /lead content description -->
+                               </div> <!-- /lead content left -->
+                               
+                           </div>
+                           
+                           <!-- lead right part -->
+                           <div class="col-md-6 col-sm-6" id="content_lead_right">
+                               <div class="container-fluid">
+                                  <!-- lead right top -->
+                                   <div class="row margin-bottom-extra">
+                                       <div class="col-md-6 col-sm-6">
+                                           <a href="https://www.youtube.com/watch?v=gEmahl1XMB0">
+                                                <img width="100%" class="media-object" src="images/mqdefault_lead_top.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-6 col-sm-6">
+                                           <p><a href="https://www.youtube.com/watch?v=gEmahl1XMB0">Official: Boba Tunnel Video Song | Bengali Film "Chotushkone" | Anupam Roy</a></p>
+                                       </div>
+                                    </div> <!-- /lead right top -->
+                                    
+                                     <!-- lead right bottom -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-6 col-sm-6">
+                                           <a href="https://www.youtube.com/watch?v=gEmahl1XMB0">
+                                                <img width="100%" class="media-object" src="images/mqdefault_lead_middle.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-6 col-sm-6">
+                                           <p><a href="https://www.youtube.com/watch?v=bDOZbvE01Fk">TEENS REACT TO NINTENDO (NES)</a></p>
+                                       </div>
+                                    </div> <!-- /lead right bottom -->
+                               </div>
+                           </div> <!-- /lead right part -->
+                           
+                       </div>
+                   </div> <!-- /lead content -->
+                   
+                   <!-- Popular on YouTube -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Popular on YouTube-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-star font-size-big"></span>
+                         <big>Popular on YouTube</big>
+                      </div><!-- /title : Popular on YouTube -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-1 -->
+                               <div class="row margin-bottom">
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <a href="http://www.youtube.com/watch?v=cQw2qIl838Q">
+                                            <img width="100%" class="media-object" src="images/mqdefault_popul_1.jpg" alt="...">
+                                        </a>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <p><a href="https://www.youtube.com/watch?v=bDOZbvE01Fk">Nick Jonas - Jealous (Audio)
+                                            <small class="small-desc">by <a>NickJonasVEVO</a><small> 69,642 views</a></p>
+                                   </div>
+                                </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                               <div class="row margin-bottom">
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <a href="http://www.youtube.com/watch?v=euCG3jbefH8">
+                                            <img width="100%" class="media-object" src="images/mqdefault_popul_2.jpg" alt="...">
+                                        </a>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <p><a href="http://www.youtube.com/watch?v=euCG3jbefH8">A pushcart and Maru.</a></p>
+                                   </div>
+                                </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                               <div class="row margin-bottom">
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <a href="https://www.youtube.com/watch?v=iwxeU9lVUms">
+                                            <img width="100%" class="media-object" src="images/mqdefault_popul_3.jpg" alt="...">
+                                        </a>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <p><a href="https://www.youtube.com/watch?v=iwxeU9lVUms">Manzil Na Rahi Koi Full Song (Audio) - Kashish - Anoop Jalota</a></p>
+                                   </div>
+                                </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                               <div class="row margin-bottom">
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <a href="https://www.youtube.com/watch?v=2IgaSA97FAk">
+                                            <img width="100%" class="media-object" src="images/mqdefault_popul_4.jpg" alt="...">
+                                        </a>
+                                   </div>
+
+                                   <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <p><a href="https://www.youtube.com/watch?v=2IgaSA97FAk">Kitni Azid Baat Hai Full Song | Tareef | Kavita Paudwal, Jaswant Singh</a></p>
+                                   </div>
+                                </div> <!-- /another contetent-2 -->
+                           </div>
+                       </div>
+                   </div> <!-- /Popular on YouTube -->
+                   
+                   <!-- Sports -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Sports-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-stats font-size-big"></span>
+                         <big>Sports</big>
+                      </div><!-- /title : Sports -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                                   <!-- another contetent-1 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=1_2QzUvLNDI">
+                                                <img width="100%" class="media-object" src="images/mqdefault_sp_1.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=1_2QzUvLNDI">Watch Arsenal stars change the game #RainbowLaces</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-3 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=O0PG556aOfE">
+                                                <img width="100%" class="media-object" src="images/mqdefault_sp_2.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=O0PG556aOfE">Bengals Re-Sign Devon Still to Pay for Daughter's Cancer</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-3 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=CPw4C1xAkRU">
+                                                <img width="100%" class="media-object" src="images/mqdefault_sp_3.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=CPw4C1xAkRU">Pratt sings 'Take Me Out to the Ballgame</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-4 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=R0EeAnZBGtM">
+                                                <img width="100%" class="media-object" src="images/mqdefault_sp-4.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=R0EeAnZBGtM">Tony Parker Vs Rémi Gaillard</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-4 -->
+                           </div>
+                       </div>
+                   </div> <!-- /Sports -->
+                   
+                   <!-- Musics -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Popular on YouTube-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-headphones font-size-big"></span>
+                         <big>Musics</big>
+                      </div><!-- /title : Popular on YouTube -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                                   <!-- another contetent-1 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=mp7qWfDANrU">
+                                                <img width="100%" class="media-object" src="images/music_1.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=mp7qWfDANrU">Meghan Trainor - Dear Future Husband (Audio)</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=HJb0VYVtaNc">
+                                                <img width="100%" class="media-object" src="images/music_2.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=HJb0VYVtaNc">
+Calvin Harris feat. John Newman - Blame (Audio)</a></p>
+Calvin Harris feat. John Newman - Blame (Audio)</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-4 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=RUAJ8KLGqis">
+                                                <img width="100%" class="media-object" src="images/music_3.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=RUAJ8KLGqis">Aphex Twin - minipops 67 [120.2][source field mix]</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-4 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-3 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=H-V7cOestUs">
+                                                <img width="100%" class="media-object" src="images/music_4.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=H-V7cOestUs">Gisele Bündchen - I WILL WHAT I WANT</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-3 -->
+                           </div>
+                       </div>
+                   </div> <!-- /Musics -->
+                   
+                   <!-- Movies -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Popular on YouTube-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-facetime-video font-size-big"></span>
+                         <big>Movies</big>
+                      </div><!-- /title : Movies -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                                   <!-- another contetent-1 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/watch?v=EdhPtxrYZRw">
+                                                <img width="100%" class="media-object" src="images/movie1.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/watch?v=EdhPtxrYZRw">LEGO Guardians of the Galaxy: Star-Lord's Mix Tape</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/watch?v=EcFJtAb77b4">
+                                                <img width="100%" class="media-object" src="images/movie2.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/watch?v=EcFJtAb77b4">Joan Rivers: Stand-Up Pioneer Dead at 81 - Fifty Years of </a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-4 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=RUAJ8KLGqis">
+                                                <img width="100%" class="media-object" src="images/movie3.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/watch?v=8aN6DKfJ3p8">God Help The Girl TRAILER 1 (2014) - Emily Browning Movi</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-4 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-3 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/watch?v=EHq_LbEZ_0Y">
+                                                <img width="100%" class="media-object" src="images/movie4.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=H-V7cOestUs">Video Game High School: Season 3 Trailer</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-3 -->
+                           </div>
+                       </div>
+                   </div> <!-- /Movies -->
+                   
+                   <!-- News -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Popular on YouTube-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-globe font-size-big"></span>
+                         <big>News</big>
+                      </div><!-- /title : Popular on YouTube -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                                   <!-- another contetent-1 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/user/FoxNewsChannel">
+                                                <img width="50%" class="media-object" src="images/news1.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/user/FoxNewsChannel">Fox News</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=HJb0VYVtaNc">
+                                                <img width="50%" class="media-object" src="images/news2.gif" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/user/zeenews">Zee News</a></p>
+
+                                       </div>
+                                    </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-4 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/user/headlinestoday">
+                                                <img width="50%" class="media-object" src="images/news3.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=RUAJ8KLGqis">Headlines Today</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-4 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-3 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="http://www.youtube.com/user/bbcnews">
+                                                <img width="50%" class="media-object" src="images/news4.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="http://www.youtube.com/user/bbcnews">BBC News</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-3 -->
+                           </div>
+                       </div>
+                   </div> <!-- /News -->
+                   
+                   <!-- TV Channels -->
+                   <div class="container-fluid" id="content_inner">
+                     <!-- title : Popular on YouTube-->
+                      <div class="row-fluid margin-bottom">
+                         <span class="glyphicon glyphicon-expand font-size-big"></span>
+                         <big>TV Channels</big>
+                      </div><!-- /title : Popular on YouTube -->
+                      
+                       <div class="row-fluid">
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                                   <!-- another contetent-1 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/user/zeebangla">
+                                                <img width="50%" class="media-object" src="images/tvch1.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/user/zeebangla">Zee Bangla</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-1 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-2 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/user/zeetv">
+                                                <img width="50%" class="media-object" src="images/tvch2.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/user/zeetv">Zee TV</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-2 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-4 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/user/zingTV">
+                                                <img width="50%" class="media-object" src="images/tvch3.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/user/zingTV">Zing TV</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-4 -->
+                           </div>
+                           
+                           <div class="col-md-3 col-sm-3 col-xs-12">
+                               <!-- another contetent-3 -->
+                                   <div class="row margin-bottom">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <a href="https://www.youtube.com/watch?v=H-V7cOestUs">
+                                                <img width="50%" class="media-object" src="images/tvch4.jpg" alt="...">
+                                            </a>
+                                       </div>
+                                       
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                           <p><a href="https://www.youtube.com/watch?v=H-V7cOestUs">Zee Music Company</a></p>
+                                       </div>
+                                    </div> <!-- /another contetent-3 -->
+                           </div>
+                       </div>
+                   </div> <!-- /TV Channels -->
+                   
+                   
+               <!-- /cointent Inner body -->
+               </div> 
+               <!-- /content part -->
+           </div>
+        
+    </div> <!-- /body part -->
+    
+    
+    
+    <!-- footer part -->
+    <footer class="navbar navbar-default navbar-fixed-bottom" id="footer">
+        <div class="container-fluid">
+            <div class="row" id="footer_top">
+                <div class="col-md-4 col-sm-4 col-xs-4" id="footer_logo">
+                    <a href="#"><img src="images/YouTube-logo-full_color.png"/></a>    
+                    <p class="visible-xs">Developed by Alin @2014 for practice.</p>
+                    <p class="visible-sm">Developed by Alin @2014 for practice.</p>
+                </div>
+                
+                <div class="col-md-8 col-sm-8 hidden-xs hidden-sm" id="btn_holder">
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Language: English <span class="caret"></span>
+                    </button>
+                    
+                    &nbsp;&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Country: Worldwide <span class="caret"></span>
+                    </button>
+                    
+                    &nbsp;&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Safety: off <span class="caret"></span>
+                    </button>
+                    
+                    &nbsp;&nbsp;&nbsp;
+
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                        Help <span class="caret"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="row hidden-xs hidden-sm" id="footer_bottom">
+                <div class="row" id="footer_menu">
+                    <ul class="nav nav-pills">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Press & Blogs</a></li>
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Creator & Partners</a></li>
+                        <li><a href="#">Advirtising</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">+YouTube</a></li>
+                    </ul>    
+                </div>
+                
+                
+                <div class="row" id="footer_info">
+                    <ul class="nav nav-pills">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Policy & Safely</a></li>
+                        <li><a href="#">Send feedback</a></li>
+                        <li><a href="#">Try something new!</a></li>
+                        <li><a href="#">@ 2014 YouTube, LLC</a></li>
+                    </ul>
+                    <p class="copyright">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Developed by Alin @2014. It's a demo for practice.</p>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- /footer part -->
+    
+    
+    
+        
+       <!-- Mobile Menu -->
+         <div class="modal fade hidden-md" id="mobile_menu" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            Menu
+                        </a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-home"></span> &nbsp; What to Watch</a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-star"></span> &nbsp; Popular on YouTube</a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-headphones"></span> &nbsp; Music</a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-stats"></span> &nbsp; Sports</a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-tower"></span> &nbsp; Gaming</a>
+                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-plus-sign"></span> &nbsp; Browse Channel</a>             
+                        <a href="#" class="list-group-item" data-toggle="modal" data-target="#about"><span class="glyphicon glyphicon-info-sign"></span> &nbsp; About</a>             
+                    </div>
+                    
+                    <div class="container-fluid">
+                        <div class="col-xs-6" id="button_holder">
+                            <button id="btn_upload" type="button" class="btn btn-default btn-sm margin-bottom">
+                                Upload
+                            </button>
+                            <button id="btn_signin" type="button" class="btn btn-primary btn-sm margin-bottom">
+                                Sign in
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+              </div>
+            </div>
+          </div>
+         </div> <!-- /Mobile Menu -->
+         
+         
+         <!-- About -->
+         <div class="modal fade" id="about" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">
+                            About
+                        </a>
+                        <hr>
+                        <big>YouTube Demo-2</big> <br>
+                        <p></p>Developed by Alin <br>
+                        ... just for my practice. <br>
+                        Developed date : 9/9/2014</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Close</button>
+                    </div>
+              </div>
+            </div>
+          </div>
+         </div> <!-- /Mobile Menu -->
+         
+         
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
+  
+</html>
