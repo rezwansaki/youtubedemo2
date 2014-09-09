@@ -1,16 +1,10 @@
-youtube-demo
-============
+"YouTube Demo-2
 
-See preview : http://rezwansaki.github.io/youtube-demo. 
+Actually I'm practicing Bootstrap 3.2.0, HTML5 and CSS3 and also jQuery. This is my first complated work file. I try to make it like 'YouTube'. 
 
-This is my first project which is uploaded by me. I upload this project for two reasons : 1. Learning 'gitHub' and 2. Show my new template by this.
+It is responsive with the devices : 'desktop', 'tab', 'mobile' and another devices. 
 
-About my template : My new template name : 'YouTube: Demo' I developed this by using htl5, css3 and Bootstrap 3.2.0.
+Start date : 8/9/2014
+Complated date : 9/9/2014
 
-I try to make it as like original YouTube but I failed.
 
-I can't anything move to anywhere easily.
-
-ok see my project and give me suggession by comment.
-
-Thanks. 
