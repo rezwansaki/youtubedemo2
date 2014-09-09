@@ -67,7 +67,7 @@
 #content_container{
     width: 72%;
     margin-top: 20px;
-    margin-bottom: 172px;
+    margin-bottom: 10px;
 }
     
 /* content */
@@ -224,17 +224,14 @@ a:hover {
         width: 90%;
         margin-top: 20px;
         margin-left: 15px;
+        margin-bottom: 10px;
     }
     
     #footer_logo {
         padding: 5px 0 0 0;
         width: 100%;
         text-align: center;
-    }
-    
-    #content_container{
-        margin-bottom: 80px;
-    }    
+    }   
 }
 /* end for mobile devices */
 
@@ -248,7 +245,7 @@ a:hover {
     }
     
     #content_container {
-        margin-bottom: 80px;
+        margin-bottom: 10px;
     }
     
     #sidebar {
