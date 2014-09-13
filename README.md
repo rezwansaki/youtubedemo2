@@ -1,7 +1,7 @@
 youtube-demo2
 ==============
 
-See preview : http://rezwansaki.github.io/youtube-demo. 
+See preview : http://rezwansaki.github.io/youtube-demo2 
 
 
 This is my practice file. I try to learn bootstrap 3.2.0.
