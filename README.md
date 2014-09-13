@@ -1,15 +1,18 @@
 youtube-demo2
+==============
 
-See preview : http://rezwansaki.github.io/youtube-demo.
+See preview : http://rezwansaki.github.io/youtube-demo. 
 
-This is my first project which is uploaded by me. I upload this project for two reasons : 1. Learning 'gitHub' and 2. Show my new template by this.
 
-About my template : My new template name : 'YouTube: Demo' I developed this by using htl5, css3 and Bootstrap 3.2.0.
+This is my practice file. I try to learn bootstrap 3.2.0.
 
-I try to make it as like original YouTube but I failed.
+1. I try to design this site as like YouTube.com
+2. It is responsive for desktop, tab and mobile devices
+3. Click any youtube video and it play in this site by using a 'Modal' so you stay in here all time. 
+4. It is a demo site so functionalities are not worke now.
+5. I target to learn design webpage so I don't try with functionary. 
 
-I can't anything move to anywhere easily.
+Thanks !!
 
-ok see my project and give me suggession by comment.
-
-Thanks. 
+Md. Rezwan Saki Alin
+http://www.alinsworld.com
