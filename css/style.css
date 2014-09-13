@@ -213,6 +213,12 @@ a:hover {
     color: red;
 }
 
+.modal-body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
 
 /* for mobile devices */
 @media screen and (max-width: 767px) {
