@@ -1,7 +1,6 @@
 youtube-demo
-============
 
-See preview : http://rezwansaki.github.io/youtube-demo. 
+See preview : http://rezwansaki.github.io/youtube-demo.
 
 This is my first project which is uploaded by me. I upload this project for two reasons : 1. Learning 'gitHub' and 2. Show my new template by this.
 
